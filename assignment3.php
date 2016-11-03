@@ -7,7 +7,7 @@
   $childClassVowel = new ChildClass("nicole", "awesomestring");
   $childClassConsonant = new ChildClass("beyonce", "crazystring");
 
-  //Cloned the child class
+  //Clone the child class
   $copiedChildClass = $childClassConsonant->cloneObject();
 ?>
 
@@ -16,6 +16,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Assignment 3</title>
+    <link rel="stylesheet" href="assignment3.css">
   </head>
   <body>
 
@@ -54,9 +55,9 @@
     <h2>Here is the user's name with exclamation points:<h2>
     <h3><?php echo $childClassVowel->addUserExclamationPoints();?>
     <h2><?php echo $childClassVowel;?></h2>
-    <link rel="stylesheet" href="assignment3.css">
 
     <hr/>
+
     <h2>This is the copied object!</h2>
     <h2>This is the original string:</h2>
     <h3><?php echo $copiedChildClass->getOriginalString();?></h3>
@@ -65,8 +66,6 @@
     <h2>Here is the user's name with exclamation points:<h2>
     <h3><?php echo $copiedChildClass->addUserExclamationPoints();?>
     <h2><?php echo $copiedChildClass;?></h2>
-
-    <link rel="stylesheet" href="assignment3.css">
     
   </body>
 </html>
