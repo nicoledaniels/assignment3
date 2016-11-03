@@ -15,6 +15,7 @@
 	<title>Assignment 3</title>
 
   <?= $parentClassVowel->toPigLatin();
+      echo '\n';
       echo $parentClassVowel; ?>
 
 	<link rel="stylesheet" href="assignment3.css">
