@@ -28,10 +28,10 @@
       return $pigWord;
     }
 
-    //Return the result of the pig latin translation
+    //Return the result of this pig latin translation as a string
     public function __toString(){
       $pigLatinWord = toPigLatin($this->regularString);
-      return $pigLatinWord;
+      return "The translation of this word is: $pigLatinWord";
     }
 
 	}
