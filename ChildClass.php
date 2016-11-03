@@ -33,7 +33,7 @@
 
     //Add exclamation points to the username
     public function addUserExclamationPoints(){
-      $exclamationUser = $this.user . "" . "!!!";
+      $exclamationUser = $this->user . "" . "!!!";
       return $exclamationUser;
     }
 

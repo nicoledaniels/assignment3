@@ -14,8 +14,23 @@
 	<meta charset="UTF-8">
 	<title>Assignment 3</title>
 
-  <?= $parentClassVowel->toPigLatin();
-      echo $parentClassVowel; ?>
+  <h1>Assignment 3 - Working with PHP</h1>
+<?php 
+    echo $parentClassVowel->getRegularString()."<br>";
+    echo $parentClassVowel->toPigLatin($parentClassVowel->getRegularString())."<br>";
+    echo $parentClassVowel."<br>";
+    
+    echo $parentClassConsonant->getRegularString()."<br>";
+    echo $parentClassConsonant->toPigLatin($parentClassConsonant->getRegularString())."<br>";
+    echo $parentClassConsonant."<br>";
+
+    echo $childClassVowel->getOriginalString()."<br>";
+    echo $childClassVowel->capitalizePigLatin()."<br>";
+    echo $childClassVowel->addUserExclamationPoints()."<br>";
+    echo $childClassVowel."<br>";
+
+
+?>
 
 	<link rel="stylesheet" href="assignment3.css">
 </head>

@@ -14,9 +14,9 @@
     }
 
     //Translate the given string into pig latin
-    public function toPigLatin(){
+    public function toPigLatin($regularString){
       $pigEnding = "ay";
-      $lowercaseInput = strtolower($this->regularString);
+      $lowercaseInput = strtolower($regularString);
       $firstLetter = $lowercaseInput[0];
 
       if ($firstLetter == "a" || $firstLetter == "e" || $firstLetter == "i" || $firstLetter == "o" || $firstLetter == "u"){
@@ -25,13 +25,13 @@
       else {
         $pigWord = substr($lowercaseInput, 1) . "" . "$firstLetter$pigEnding";
       }
-      return $pigWord."\n";
+      return $pigWord;
     }
 
     //Return the result of this pig latin translation as a string
     public function __toString(){
-      $pigLatinWord = $this->toPigLatin();
-      return "The translation of this word is: $pigLatinWord\n";
+      $pigLatinWord = $this->toPigLatin($this->regularString);
+      return "The translation of this word is: $pigLatinWord";
     }
 
 	}
