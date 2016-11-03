@@ -3,20 +3,20 @@
 
 	class ParentClass {
 
-    public $regularString;
+    public $originalString;
 
-    public function __construct($regularString){
-      $this->regularString = $regularString;  
+    public function __construct($originalString){
+      $this->originalString = $originalString;  
     }
 
-    public function getRegularString(){
-      return $this->regularString;
+    public function getOriginalString(){
+      return $this->originalString;
     }
 
     //Translate the given string into pig latin
-    public function toPigLatin($regularString){
+    public function toPigLatin($originalString){
       $pigEnding = "ay";
-      $lowercaseInput = strtolower($regularString);
+      $lowercaseInput = strtolower($originalString);
       $firstLetter = $lowercaseInput[0];
 
       if ($firstLetter == "a" || $firstLetter == "e" || $firstLetter == "i" || $firstLetter == "o" || $firstLetter == "u"){
@@ -30,7 +30,7 @@
 
     //Return the result of this pig latin translation as a string
     public function __toString(){
-      $pigLatinWord = $this->toPigLatin($this->regularString);
+      $pigLatinWord = $this->toPigLatin($this->originalString);
       return "The translation of this word is: $pigLatinWord";
     }
 

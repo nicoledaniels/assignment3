@@ -6,35 +6,67 @@
   $parentClassConsonant = new ParentClass("crazystring");
   $childClassVowel = new ChildClass("nicole", "awesomestring");
   $childClassConsonant = new ChildClass("beyonce", "crazystring");
+
+  //Cloned the child class
+  $copiedChildClass = $childClassConsonant->cloneObject();
 ?>
 
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Assignment 3</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+  </head>
+  <body>
 
-  <h1>Assignment 3 - Working with PHP</h1>
-<?php 
-    echo $parentClassVowel->getRegularString()."<br>";
-    echo $parentClassVowel->toPigLatin($parentClassVowel->getRegularString())."<br>";
-    echo $parentClassVowel."<br>";
+    <h1 class="page-title">Assignment 3 - Working with PHP</h1>
+
+    <h2>This is the original string:</h2>
+    <h3><?php echo $parentClassVowel->getOriginalString();?></h3>
+    <h2>This is the pig latin translation:</h2>
+    <h3><?php echo $parentClassVowel->toPigLatin($parentClassVowel->getOriginalString());?></h3>
+    <h3><?php echo $parentClassVowel?></h3>
+
+    <hr/>
+
+    <h2>This is the original string:</h2>
+    <h3><?php echo $parentClassConsonant->getOriginalString();?></h3>
+    <h2>This is the pig latin translation:</h2>
+    <h3><?php echo $parentClassVowel->toPigLatin($parentClassConsonant->getOriginalString());?></h3>
+    <h3><?php echo $parentClassConsonant?></h3>
+
+    <hr/>
+
+    <h2>This is the original string:</h2>
+    <h3><?php echo $childClassConsonant->getOriginalString();?></h3>
+    <h2>Here is the pig latin capitalized:</h2>
+    <h3><?php echo $childClassConsonant->capitalizePigLatin();?></h3>
+    <h2>Here is the user's name with exclamation points:<h2>
+    <h3><?php echo $childClassConsonant->addUserExclamationPoints();?>
+    <h2><?php echo $childClassConsonant;?></h2>
+
+    <hr/>
+
+    <h2>This is the original string:</h2>
+    <h3><?php echo $childClassVowel->getOriginalString();?></h3>
+    <h2>Here is the pig latin capitalized:</h2>
+    <h3><?php echo $childClassVowel->capitalizePigLatin();?></h3>
+    <h2>Here is the user's name with exclamation points:<h2>
+    <h3><?php echo $childClassVowel->addUserExclamationPoints();?>
+    <h2><?php echo $childClassVowel;?></h2>
+    <link rel="stylesheet" href="assignment3.css">
+
+    <hr/>
+    <h2>This is the copied object!</h2>
+    <h2>This is the original string:</h2>
+    <h3><?php echo $copiedChildClass->getOriginalString();?></h3>
+    <h2>Here is the pig latin capitalized:</h2>
+    <h3><?php echo $copiedChildClass->capitalizePigLatin();?></h3>
+    <h2>Here is the user's name with exclamation points:<h2>
+    <h3><?php echo $copiedChildClass->addUserExclamationPoints();?>
+    <h2><?php echo $copiedChildClass;?></h2>
+
+    <link rel="stylesheet" href="assignment3.css">
     
-    echo $parentClassConsonant->getRegularString()."<br>";
-    echo $parentClassConsonant->toPigLatin($parentClassConsonant->getRegularString())."<br>";
-    echo $parentClassConsonant."<br>";
-
-    echo $childClassVowel->getOriginalString()."<br>";
-    echo $childClassVowel->capitalizePigLatin()."<br>";
-    echo $childClassVowel->addUserExclamationPoints()."<br>";
-    echo $childClassVowel."<br>";
-
-
-?>
-
-	<link rel="stylesheet" href="assignment3.css">
-</head>
-<body>
-	
-</body>
+  </body>
 </html>

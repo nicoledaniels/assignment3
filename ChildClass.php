@@ -37,9 +37,9 @@
       return $exclamationUser;
     }
 
-    public function cloneObject($originalObject){
-      $clonedObject = clone $originalObject; 
-      return $cloneObject;
+    public function cloneObject(){
+      $clonedObject = clone $this; 
+      return $clonedObject;
     }
 		
 	}
